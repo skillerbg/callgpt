@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
+  <link rel="stylesheet" href="options.css">
+  <script src="permision.js"></script>
+  <script src="options.js"></script>
+
+</head>
+
+<body>
+  <div class="container">
+    <h1>Settings</h1>
+    <div class="form-group">
+      <div class="section">
+        <h2 class="section-header">General</h2>
+        <div class="section-content-general">
+          <div>
+            <label for="gptApi">Your GPT API key:</label>
+            <div class="input-container">
+              <input type="password" id="gptApi" />
+              <i id="toggleApiKeyVisibility" class="fas fa-eye"></i>
+            </div>
+          </div>
+        
+          <div>
+            <label for="waitSeconds">Seconds to wait after finishing speaking:</label>
+            <span id="waitSecondsValue">2</span>
+            <input type="range" id="waitSeconds" value="2" step="0.1" min="0.5" max="4">
+          </div>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-header">Voice Settings</h2>
+        <div class="section-content">
+          <label for="voiceSelect">Select Voice:</label>
+          <div class="voice-container">
+            <select id="voiceSelect"></select>
+          </div>
+          <label for="voiceSpeed">Voice Speed:</label>
+          <span id="voiceSpeedValue">1</span>
+          <input type="range" id="voiceSpeed" min="0.5" max="2" step="0.1" value="1">
+          <label for="voiceVolume">Voice Volume:</label>
+          <span id="voiceVolumeValue">1</span>
+          <input type="range" id="voiceVolume" min="0" max="1" step="0.01" value="1">
+          <label for="voicePitch">Voice Pitch:</label>
+          <span id="voicePitchValue">1</span>
+          <input type="range" id="voicePitch" min="0" max="2" step="0.1" value="1">
+          <button id="testVoiceButton">Test voice</button>
+        </div>
+      </div>
+
+      <div class="section">
+        <h2 class="section-header">Advanced Settings</h2>
+        <div class="section-content">
+          <label for="system">System:</label>
+          <br>
+          <textarea id="system" rows="3"
+            cols="30">This is a transcription of a voice call between a sentient AI and a human.</textarea>
+          <br>
+          <label for="model">Model:</label>
+          <select id="model">
+            <option value="gpt-3.5-turbo-0301">gpt-3.5-turbo-0301</option>
+            <option value="gpt-3.5-turbo">gpt-3.5-turbo</option>
+            <option value="gpt-4">gpt-4</option>
+          </select>
+          <div>
+            <label for="temperature">Temperature:</label>
+            <span id="temperatureValue">0.7</span>
+            <input type="range" id="temperature" value="0.7" step="0.1" min="0" max="1">
+          </div>
+          <div>
+            <label for="maxLength">Maximum Length:</label>
+            <span id="maxLengthValue">256</span>
+            <input type="range" id="maxLength" value="256" step="1" min="1" max="2048">
+          </div>
+          <div>
+            <label for="topP">Top P:</label>
+            <span id="topPValue">1</span>
+            <input type="range" id="topP" value="1" step="0.1" min="0" max="1">
+          </div>
+          <div>
+            <label for="frequencyPenalty">Frequency Penalty:</label>
+            <span id="frequencyPenaltyValue">0</span>
+            <input type="range" id="frequencyPenalty" value="0" step="0.1" min="0" max="2">
+          </div>
+          <div>
+            <label for="presencePenalty">Presence Penalty:</label>
+            <span id="presencePenaltyValue">0</span>
+            <input type="range" id="presencePenalty" value="0" step="0.1" min="0" max="2">
+          </div>
+        </div>
+      </div>
+    </div>
+    <button id="saveButton">Save and restart</button>
+  </div>
+  
+</body>
+
+</html>
