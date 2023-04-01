@@ -33,7 +33,7 @@ function MyComponent() {
         console.log("test!!!!!!!!!!!");
         onPermissionGranted();
       } else {
-        chrome.tabs.create({ url: "popup.html" });
+        chrome.tabs.create({ url: "options.html" });
       }
 
       permissionStatus.onchange = function () {
@@ -135,7 +135,7 @@ function MyComponent() {
       if (payload.choices[0].delta.content) {
         let text = payload.choices[0].delta.content;
         if (text && text !== "\n") {
-          if (text === "." || text === "!" || text === "?" || text === ",") {
+          if (text === "." || text === "!" || text === "?" || text === "," || text === ";" || text === ":") {
             resultRef = resultRef + text;
             console.log(resultRef);
             speakSentence(sentenceRef);

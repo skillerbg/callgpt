@@ -1,6 +1,6 @@
 {
-  "name": "My Extension2",
-  "description": "This is my first Chrome extension",
+  "name": "CallGPT",
+  "description": "CallGPT is a browser extension that enables users to engage in a voice-based conversation with OpenAI's GPT-4 or ChatGPT models. It provides an interactive experience, allowing users to communicate with the AI in real-time. Users are required to provide their OpenAI API key, which is securely stored in the browser's storage for safekeeping.",
   "version": "1.0",
   "manifest_version": 2,
   "background": {
@@ -9,11 +9,14 @@
     "MyComponent.js"]
   },
   "icons": {
-    "16": "logo192.png"
+    "16": "callGpt_color_16.png",
+    "48": "callGpt_color_48.png",
+    "128": "callGpt_color_128.png"
+
 
   },
   "browser_action": {
-    "default_icon": "off-icon.png",
+    "default_icon": "callGpt_bw_48.png",
     "default_popup": ""
   },
   "content_scripts": [

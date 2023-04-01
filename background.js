@@ -23,7 +23,7 @@ function myFunction() {
         // The value is not set, open the options page in a new tab
         chrome.tabs.create({ url: "options.html" });
       }else{
-        chrome.browserAction.setIcon({ path: "on-icon.png" });
+        chrome.browserAction.setIcon({ path: "callGpt_color_48.png" });
         MyComponent();
       }
     });
@@ -32,7 +32,7 @@ function myFunction() {
   } else {
     chrome.runtime.reload()
  
-    chrome.browserAction.setIcon({ path: "off-icon.png" });
+    chrome.browserAction.setIcon({ path: "callGpt_bw_48.png" });
   }
 
 
