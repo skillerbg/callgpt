@@ -4,6 +4,10 @@ CallGPT is a browser extension that allows you to mimic a real voice conversatio
 
 **Important Note:** The extension is written in manifest v2, and the Chrome Web Store no longer accepts v2 extensions. Rewriting it for v3 would compromise its user-friendliness. Therefore, this extension can only be installed manually. 
 
+
+https://user-images.githubusercontent.com/40869433/234906340-9e062c36-73f6-478e-8e80-c1c68492d350.mp4
+
+
 ## Features
 - Voice call experience with ChatGPT
 - Real-time conversation with AI
